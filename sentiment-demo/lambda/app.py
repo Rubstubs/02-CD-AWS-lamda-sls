@@ -4,7 +4,6 @@ import boto3
 from UnleashClient import UnleashClient
 
 def handler(event, context):
-    print("asdsadsda")
     client = boto3.client('comprehend')
     body = event["body"]
     sentiment = client.detect_sentiment(LanguageCode = "en", Text = body)
